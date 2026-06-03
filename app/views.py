@@ -80,3 +80,26 @@ def elenco(request):
     return render(request, 'elenco.html', {
         'personagens': personagens
     })
+def autoras(request):
+
+    autoras = [
+
+        {
+            'nome': 'Anna Vitória',
+            'funcao': 'Desenvolvimento',
+            'descricao': 'Desenvolvimento do projeto - front-end e back-end',
+            'tecnologias': 'HTML, CSS, Bootstrap e Django'
+        },
+
+        {
+            'nome': 'Camily Zipóra',
+            'funcao': 'Desenvolvimento',
+            'descricao': 'Desenvolvimento do projeto - front-end e back-end',
+            'tecnologias': 'HTML, CSS, Bootstrap e Django'
+        }
+
+    ]
+
+    return render(request, 'autoras.html', {
+        'autoras': autoras
+    })

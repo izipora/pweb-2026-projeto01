@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block content %}
+
+<section class="about-section">
+
+    <div class="container-fluid p-0">
+
+        <div class="row g-0 align-items-stretch">
+
+            <div class="col-lg-5 d-flex align-items-center">
+
+                <div class="about-content">
+
+                    <h2 class="about-title">
+                        Sobre as autoras
+                    </h2>
+
+                    <p class="about-text" style="text-align: justify;">
+                        O processo de produção deste site envolveu etapas de pesquisa, seleção de informações, organização do conteúdo e desenvolvimento da apresentação visual, 
+                        com o objetivo de oferecer aos leitores uma experiência clara e informativa sobre o filme O Castelo Animado.O trabalho foi desenvolvido de forma colaborativa, 
+                        unindo criatividade, dedicação 
+                        e atenção aos detalhes para garantir a qualidade das informações apresentadas.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-7 p-0">
+                <img src="{% static 'imgs/autoras.webp' %}"
+                     class="about-img"
+                     alt="O Castelo Animado">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+
+        <h1>Sobre as Criadoras</h1>
+
+        <p class="lead">
+            Conheça as desenvolvedoras deste projeto.
+        </p>
+
+    </div>
+
+    <div class="row g-4 justify-content-center">
+
+        {% for autora in autoras %}
+
+        <div class="col-12 col-md-5">
+
+            <div class="card shadow-sm h-100 text-center">
+
+                <div class="card-body p-4">
+
+                    <h3>
+                        {{ autora.nome }}
+                    </h3>
+
+                    <p class="text-muted">
+                        {{ autora.funcao }}
+                    </p>
+
+                    <p>
+                        {{ autora.descricao }}
+                    </p>
+
+                    <p>
+                        <strong>Tecnologias:</strong>
+                        {{ autora.tecnologias }}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</div>
+
+
+{% endblock %}
