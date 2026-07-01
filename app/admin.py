@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Sobre, Autora, Elenco
 
-# Register your models here.
+admin.site.register(Sobre)
+admin.site.register(Autora)
+admin.site.register(Elenco)
